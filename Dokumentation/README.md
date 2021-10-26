@@ -72,12 +72,13 @@ Die Installation ist hiermit abgeschlossen. Sie dürfen den Zugriff auf das Web-
 ## Error-Handling
 Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies mehrere Gründe haben. Weiter unten finden Sie die gängigsten Fehler aufgelistet.
 ### Allgemeine Schritte vor weiterem Debugging zwingend ausführen
-• Raspberry Pi neu starten
-• Prüfen, ob der Dienst der Anwendung läuft
-• Netzwerkverbindung prüfen
+• Raspberry Pi neu starten<br>
+• Prüfen, ob der Dienst der Anwendung läuft<br>
+• Netzwerkverbindung prüfen<br>
 • Restriktionen im Netzwerk ausschliessen
 - - -
 ## Quellen
 • [Offizielle Installationsanleitung von OwnCloud](https://owncloud.com/de/news/howto-owncloud-infinite-scale-on-a-raspberry-pi/)<br>
-• 
+• [etcd Dokumentation](https://etcd.io/docs/v3.5/)<br>
+• []()
 - - -
