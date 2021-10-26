@@ -38,7 +38,7 @@ Nach dem Sie den Raspi mit SD Karte von der Lehrperson erhalten haben, führen S
 `sudo apt-get update`<br>
 `sudo apt-get upgrade`
 - - -
-## Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)
+## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 - - -
 ## Error-Handling
 Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies mehrere Gründe haben. Weiter unten finden Sie die gängigsten Fehler aufgelistet.

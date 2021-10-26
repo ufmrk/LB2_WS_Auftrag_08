@@ -8,7 +8,7 @@
 
    • Version: 2.0 (Didaktisch reduzierte Edition)
    ---
-## Einfuehrung
+## Einführung
 In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt allen Anforderungen von Webmin dokumentiert.
 Alle Kommandos, welche im Terminal des Raspberry Pis ausgeführt werden müssen, sind in der folgenden [Abbildung](../img/cmd.png) einsehbar.
 
@@ -36,7 +36,7 @@ Alle Kommandos, welche im Terminal des Raspberry Pis ausgeführt werden müssen,
 
 ### Hilfestellung (Tipps, Quellen...)
 - - -
-## Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)
+## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 - - -
 ## Error-Handling
 Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies mehrere Gründe haben. Weiter unten finden Sie die gängigsten Fehler aufgelistet.
