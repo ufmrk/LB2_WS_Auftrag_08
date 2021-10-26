@@ -56,7 +56,16 @@ Zu guter letzt muss noch der Service gestartet werden.<br>
 Als erstes muss man den Build vom Downloadserver herunterladen.<br>
 `curl https://download.owncloud.com/ocis/ocis/1.1.0/ocis-1.1.0-linux-arm --output ocis-1.1.0-linux-arm`<br>
 Sobald der Build heruntergeladen wurde, muss man diesen ausführen. Damit dies klappt muss folgender Befehl eingegeben werden:<br>
-`chmod 755 ./ocis-1.1.0-linux-arm`
+`chmod 755 ./ocis-1.1.0-linux-arm`<br>
+Nun erstellen wir ein Skript, welches die OwnCloud Instanz startet. Dem Skript muss mitgegeben werden, dass etcd verwendet werden muss.<br>
+![Inhalt von Startskript](../img/startocis.png.)<br>
+An dieser Stelle müssen wir das eben erstelle Skript ausführbar machen<br>
+` sudo chmod 755 startocis.sh`<br>
+Am Ende führen wir das Skript aus um die OwnCloud Instanz zu starten<br>
+`sudo ./startocis.sh`
+### Zugreifen
+Die Installation ist hiermit abgeschlossen. Sie dürfen den Zugriff auf das Web-Interface von Ihrer OwnCloud Instanz testen.<br>
+`https://<hostname>:9200`
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 - - -
