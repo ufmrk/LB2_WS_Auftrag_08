@@ -38,9 +38,11 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
 - - -
 ## Installationsanleitung (Lösungsweg)
 ### Raspberry Pi Betriebssystem updaten<br>
-Nach dem Sie den Raspi mit SD Karte von der Lehrperson erhalten haben, führen Sie als erstes die Betriebssystem Updates aus. So können Sie jegliche veraltete Systemfehler meiden. Dies machen Sie mit folgendem Befehl im Terminal:<br>
+Nach dem Sie den Raspi mit SD Karte von der Lehrperson erhalten haben, führen Sie als erstes die Betriebssystem Updates aus. So können Sie jegliche veraltete Systemfehler meiden. Dies machen Sie mit folgenden Befehlen im Terminal:<br>
 `sudo apt-get update`<br>
 `sudo apt-get upgrade`
+
+### 
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 - - -

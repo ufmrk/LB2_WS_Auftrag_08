@@ -37,6 +37,8 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
    • Neuste OS Version von Raspberry Pi inkl. Updates<br>
 - - -
 ## Installationsanleitung (Didaktisch reduzierte Anleitung. Lernende sollen eigene Lösungswege realisieren)
+• Paketliste aktualisieren<br>
+• 
 
 ### Hilfestellung (Tipps, Quellen...)
 - - -
