@@ -29,7 +29,6 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
    • ggf. Netzwerkperipherie (Kabel, Switch)
    ### Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)
    • Neuste OS Version von Raspberry Pi inkl. Updates<br>
-   • Neuste Version von OwnCloud als Image<br>
 - - -
 ## Installationsanleitung (Didaktisch reduzierte Anleitung. Lernende sollen eigene Lösungswege realisieren)
 
