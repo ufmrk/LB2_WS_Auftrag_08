@@ -20,7 +20,7 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
 
    ### Vorgesehener Zeitaufwand für die Realisierung
    Der Zeitaufwand beträgt unserer Schätzung nach 60 Minuten im Durchschnitt. Die Schätzung kann wegen Hardware-Build, Software-Version und Netzwerkanbindung abweichen.
-   
+
    ### Stolpersteine
    Bei folgendem Projekt können mehrere **Stolpersteine** aufkommen, welche uns, sowie anschliessend Sie an einer erfolgreichen Umsetzung hindern können oder diese zumindest erschweren können. Um den gägnigsten **Stolpersteinen** aus dem Weg gehen zu können, wurden diese aufgelistet.<br><br>
    **• Veraltete Version des Raspberry Pi**<br>
@@ -51,4 +51,6 @@ Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies meh
 • Restriktionen im Netzwerk ausschliessen
 - - -
 ## Quellen
+• [Offizielle Installationsanleitung von OwnCloud](https://owncloud.com/de/news/howto-owncloud-infinite-scale-on-a-raspberry-pi/)<br>
+• 
 - - -

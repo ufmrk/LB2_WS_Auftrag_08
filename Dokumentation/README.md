@@ -53,3 +53,6 @@ Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies meh
 • Restriktionen im Netzwerk ausschliessen
 - - -
 ## Quellen
+• [Offizielle Installationsanleitung von OwnCloud](https://owncloud.com/de/news/howto-owncloud-infinite-scale-on-a-raspberry-pi/)<br>
+• 
+- - -
