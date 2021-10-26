@@ -47,7 +47,7 @@ etcd ist ein stark konsistenter, verteilter Key-Value-Speicher, der eine zuverl�
 `sudo apt-get install etcd`<br>
 Anschliessend muss die Konfigurationsdatei angepasst werden, damit die Funktionalität von **etcd** gewährleistet werden kann.<br>
 `nano /etc/default/etcd`<br>
-Am Ende von */etc/default/etcd* müssen wir die folgende Zeile hinzufügen<br>
+Am Ende von */etc/default/etcd* müssen wir die folgende Zeile hinzufügen.<br>
 `ETCD_UNSUPPORTED_ARCH=arm`<br>
 Zu guter letzt muss noch der Service gestartet werden.<br>
 `sudo service etcd start`
@@ -58,7 +58,7 @@ Als erstes muss man den Build vom Downloadserver herunterladen.<br>
 Sobald der Build heruntergeladen wurde, muss man diesen ausführen. Damit dies klappt muss folgender Befehl eingegeben werden:<br>
 `chmod 755 ./ocis-1.1.0-linux-arm`<br>
 Nun erstellen wir ein Skript, welches die OwnCloud Instanz startet. Dem Skript muss mitgegeben werden, dass etcd verwendet werden muss.<br>
-![Inhalt von Startskript](../img/startocis.png.)<br>
+![Inhalt von Startskript](../img/startocis.png)<br>
 An dieser Stelle müssen wir das eben erstelle Skript ausführbar machen<br>
 ` sudo chmod 755 startocis.sh`<br>
 Am Ende führen wir das Skript aus um die OwnCloud Instanz zu starten<br>
