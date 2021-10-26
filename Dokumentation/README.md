@@ -44,6 +44,3 @@ Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies meh
 • Restriktionen im Netzwerk ausschliessen
 - - -
 ## Quellen
-https://www.tecmint.com/18-tar-command-examples-in-linux/<br>
-https://sourceforge.net/projects/webadmin/files/webmin/
-http://doxfer.webmin.com/Webmin/Main_Page
