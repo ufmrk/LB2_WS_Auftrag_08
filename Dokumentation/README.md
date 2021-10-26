@@ -18,14 +18,19 @@ Alle Kommandos, welche im Terminal des Raspberry Pis ausgeführt werden müssen,
    Der Zeitaufwand beträgt unserer Schätzung nach 60 Minuten im Durchschnitt. Die Schätzung kann wegen Hardware-Build, Software-Version und Netzwerkanbindung abweichen.
    ### Stolpersteine
    Bei folgendem Projekt können mehrere **Stolpersteine** aufkommen, welche uns, sowie anschliessend Sie an einer erfolgreichen Umsetzung hindern können oder diese zumindest erschweren können. Um den gägnigsten **Stolpersteinen** aus dem Weg gehen zu können, wurden diese aufgelistet.<br><br>
+   **• Veraltete Version des Raspberry Pi**<br>
+   Falls sich der Raspberry Pi nicht aktualisieren lässt und/oder die Hardware veraltet ist, kann (muss nicht!) es vorkommen, dass es zu Problemen bezüglich Kompatibilität führt. Wir empfehlen in einem solchen Fall eine virtuelle Maschine zu erstellen und das Raspbian OS aufzusetzen.<br>
+   **• Restriktionen des (TBZ) Netzwerks**<br>
+   Da öffentliche Netzwerke oft viele Sicherheitsmassnahmen eingepflegt erhalten, besteht die Möglichkeit, dass immer wieder Ports, welche essentiell für eine Anwendung sind, blockiert werden. Es gilt die Empfehlung bei Home Office Möglichkeit diese zu nutzen und aus dem Heimnetzwerk aus zu arbeiten.<br>
 - - -
 ## Benötigte Hard- und Software
-   ### Hardware (Materialliste, Funktionalität)
-• Raspberry Pi<br>
-• Monitor + Peripherie (Maus und Tastatur)<br>
-   ### Software (Anforderungen, Firmware, OS-Image, ergänzende SW-Packages, Abhängigkeiten, Funktionalität)
-• Neuste OS Version von Raspberry PI inkl. Updates<br>
-• Neuste Version von OwnCloud als Image<br>
+   ### Hardware (Materialliste, Funktionalitaet)
+   • Raspberry Pi<br>
+   • Monitor + Peripherie (Maus und Tastatur)<br>
+   • ggf. Netzwerkperipherie (Kabel, Switch)
+   ### Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)
+   • Neuste OS Version von Raspberry Pi inkl. Updates<br>
+   • Neuste Version von OwnCloud als Image<br>
 - - -
 ## Installationsanleitung (Lösungsweg)
 ### Raspberry Pi Betriebssystem updaten<br>
