@@ -4,7 +4,7 @@
 In diesem Repository ist der **Werkstattauftrag 08** auf zwei verschiedene Arten dokumentiert. Eine didaktisch reduzierte Version für Lernende ist vorhanden, sowie eine vollständige Dokumentation des Auftrags.
 
 Hier geht es zu den Dokumentationen:<br>
-[Didaktisch reduzierte Dokumentation(/Didaktische Reduktion/README.md)<br>
+[Didaktisch reduzierte Dokumentation](/Didaktische&#32Reduktion/README.md)<br>
 [Vollständige Dokumentation](/Dokumentation/README.md)
 ---
 ## OpenSource Lizenz
