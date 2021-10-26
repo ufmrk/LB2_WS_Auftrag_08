@@ -42,7 +42,21 @@ Nach dem Sie den Raspi mit SD Karte von der Lehrperson erhalten haben, führen S
 `sudo apt-get update`<br>
 `sudo apt-get upgrade`
 
-### 
+### etcd installieren
+etcd ist ein stark konsistenter, verteilter Key-Value-Speicher, der eine zuverlässige Möglichkeit zum Speichern von Daten bietet, auf die ein distributed System oder ein Cluster von Rechnern zugreifen muss. In unserem Fall wird dieser verwendet, um den Service zu registrieren.<br>
+`sudo apt-get install etcd`<br>
+Anschliessend muss die Konfigurationsdatei angepasst werden, damit die Funktionalität von **etcd** gewährleistet werden kann.<br>
+`nano /etc/default/etcd`<br>
+Am Ende von */etc/default/etcd* müssen wir die folgende Zeile hinzufügen<br>
+`ETCD_UNSUPPORTED_ARCH=arm`<br>
+Zu guter letzt muss noch der Service gestartet werden.<br>
+`sudo service etcd start`
+
+### OwnCloud Infinite Scale Binary herunterladen und ausführen
+Als erstes muss man den Build vom Downloadserver herunterladen.<br>
+`curl https://download.owncloud.com/ocis/ocis/1.1.0/ocis-1.1.0-linux-arm --output ocis-1.1.0-linux-arm`<br>
+Sobald der Build heruntergeladen wurde, muss man diesen ausführen. Damit dies klappt muss folgender Befehl eingegeben werden:<br>
+`chmod 755 ./ocis-1.1.0-linux-arm`
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 - - -
