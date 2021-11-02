@@ -50,7 +50,7 @@ Anschliessend muss die Konfigurationsdatei angepasst werden, damit die Funktiona
 Am Ende von */etc/default/etcd* müssen wir die folgende Zeile hinzufügen.<br>
 `ETCD_UNSUPPORTED_ARCH=arm`<br>
 Zu guter letzt muss noch der Service gestartet werden.<br>
-`sudo service etcd start`
+`sudo service etcd start`<br>
 
 ### OwnCloud Infinite Scale Binary herunterladen und ausführen
 Als erstes muss man den Build vom Downloadserver herunterladen.<br>
@@ -66,6 +66,8 @@ Am Ende führen wir das Skript aus um die OwnCloud Instanz zu starten<br>
 ### Zugreifen
 Die Installation ist hiermit abgeschlossen. Sie dürfen den Zugriff auf das Web-Interface von Ihrer OwnCloud Instanz testen.<br>
 `https://<hostname>:9200`
+### Cronjob für Startskript
+
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 - - -
