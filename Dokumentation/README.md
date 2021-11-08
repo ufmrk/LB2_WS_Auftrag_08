@@ -18,7 +18,7 @@
     - [Stolpersteine](#stolpersteine)
   - [Benötigte Hard- und Software](#benötigte-hard--und-software)
     - [Hardware (Materialliste, Funktionalität)](#hardware-materialliste-funktionalitaet)
-    - [Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalität)](#software-anforderungen-firmware-os-image-ergaenzende-sw-packages-abhängigkeiten-funktionalitaet)
+    - [Software (Anforderungen, Firmware, OS-Image, ergänzende SW-Packages, Abhängigkeiten, Funktionalität)](#software-anforderungen-firmware-os-image-ergaenzende-sw-packages-abhängigkeiten-funktionalitaet)
   - [Installationsanleitung (Lösungsweg)](#installationsanleitung-lösungsweg)
     - [Raspberry Pi Betriebssystem updaten<br>](#raspberry-pi-betriebssystem-updaten)
     - [etcd installieren](#etcd-installieren)
@@ -57,7 +57,7 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
    • Raspberry Pi<br>
    • Monitor + Peripherie (Maus und Tastatur)<br>
    • ggf. Netzwerkperipherie (Kabel, Switch)
-   ### Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalität)
+   ### Software (Anforderungen, Firmware, OS-Image, ergänzende SW-Packages, Abhängigkeiten, Funktionalität)
    • Neuste OS Version von Raspberry Pi inkl. Updates<br>
 - - -
 ## Installationsanleitung (Lösungsweg)
