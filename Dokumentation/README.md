@@ -8,6 +8,30 @@
 
    • Version: 1.0 (Vollständige Edition)
 - - -
+## Inhaltsvezeichnis
+- - [Werkstattauftrag W08 OwnCloud](#werkstattauftrag-w08-owncloud)
+  - [Autoren, Versionierung des Dokumentes](#autoren-versionierung-des-dokumentes)
+  - [Einführung](#einführung)
+    - [Beschreibung: Welche Funktionen wird der Service erfüllen](#beschreibung-welche-funktionen-wird-der-service-erfüllen)
+      - [OwnCloud Infinite Scale](#owncloud-infinite-scale)
+    - [Vorgesehener Zeitaufwand für die Realisierung](#vorgesehener-zeitaufwand-für-die-realisierung)
+    - [Stolpersteine](#stolpersteine)
+  - [Benötigte Hard- und Software](#benötigte-hard--und-software)
+    - [Hardware (Materialliste, Funktionalitaet)](#hardware-materialliste-funktionalitaet)
+    - [Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)](#software-anforderungen-firmware-os-image-ergaenzende-sw-packages-abhängigkeiten-funktionalitaet)
+  - [Installationsanleitung (Lösungsweg)](#installationsanleitung-lösungsweg)
+    - [Raspberry Pi Betriebssystem updaten<br>](#raspberry-pi-betriebssystem-updaten)
+    - [etcd installieren](#etcd-installieren)
+    - [OwnCloud Infinite Scale Binary herunterladen und ausführen](#owncloud-infinite-scale-binary-herunterladen-und-ausführen)
+    - [Zugreifen](#zugreifen)
+    - [Cronjob für Startskript erstellen (Optional)](#cronjob-für-startskript-erstellen-optional)
+  - [Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)](#qualitätskontrolle-prüfen-der-funktionalität-mit-ablauf-von-kommandos-und-entsprechenden-outputs)
+  - [Error-Handling](#error-handling)
+    - [Allgemeine Schritte vor weiterem Debugging zwingend ausführen](#allgemeine-schritte-vor-weiterem-debugging-zwingend-ausführen)
+    - [Logs von CRON auslesen](#logs-von-cron-auslesen)
+  - [Quellen](#quellen)
+  - [Hilfe](#hilfe)
+- - - 
 ## Einführung
 In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt allen Anforderungen von OwnCloud dokumentiert.
 
