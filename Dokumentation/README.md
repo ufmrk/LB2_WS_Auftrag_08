@@ -49,9 +49,9 @@ Anschliessend muss die Konfigurationsdatei angepasst werden, damit die Funktiona
 `nano /etc/default/etcd`<br>
 Am Ende von */etc/default/etcd* müssen wir die folgende Zeile hinzufügen.<br>
 `ETCD_UNSUPPORTED_ARCH=arm`<br>
-Zu guter letzt muss noch der Service gestartet werden.<br>
+Zu guter letzt muss noch der Service gestartet werden. Ebenfalls geben wir dem System mit, dass der Service bei jedem Start automatisch gestartet wird.<br>
 `sudo service etcd start`<br>
-
+`sudo service etcd enable`
 ### OwnCloud Infinite Scale Binary herunterladen und ausführen
 Nun begeben wir uns in das Homeverzeichnis des Users pi.<br>
 `cd ~`<br>
@@ -80,6 +80,10 @@ Sobald das File gespeichert wird, starten wir den Cron Service neu, um die Ände
 `sudo service cron restart`
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
+• Erreichbarkeit des Web-Interface im Browser prüfen<br>
+`https://"hostname":9200`<br>
+• Cron Logs auslesen und prüfen, ob das Startskript ausgeführt wurde<br>
+`sudo grep CRON /var/log/syslog`
 - - -
 ## Error-Handling
 Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies mehrere Gründe haben. Weiter unten finden Sie die gängigsten Fehler aufgelistet.
@@ -88,9 +92,17 @@ Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies meh
 • Prüfen, ob der Dienst der Anwendung läuft<br>
 • Netzwerkverbindung prüfen<br>
 • Restriktionen im Netzwerk ausschliessen
+### Logs von CRON auslesen
+Falls der Verdacht besteht, dass der Cronjob nicht oder nicht korrekt ausgeführt wurde, kann man dies in den Logs prüfen. Das allgemeine Logfile kann man mit folgendem Befehl auslesen.<br>
+`sudo grep CRON /var/log/syslog`<br>
+Wird man aus dem Syslog nicht schlau, so kann man auch für einen Cronjob zwei spezifische Logfiles anlegen und diese anschliessend auslesen. Den Parameter setzt man beim Cronjob selbst. So kann dieser anschliessend aussehen:<br>
+`*/5 * * * * /bin/bash /home/pi/startocis.sh 1> /home/pi/log.txt 2> /home/pi/err.txt`<br>
+Wie der Parameter schon sagt, differenziert man zwischen Log-, und Errorfile in diesem Beispiel.
 - - -
 ## Quellen
 • [Offizielle Installationsanleitung von OwnCloud](https://owncloud.com/de/news/howto-owncloud-infinite-scale-on-a-raspberry-pi/)<br>
 • [etcd Dokumentation](https://etcd.io/docs/v3.5/)<br>
-• []()
+- - -
+## Hilfe
+• [Crontab Generator](https://crontab-generator.org/)<br>
 - - -
