@@ -37,10 +37,45 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
    • Neuste OS Version von Raspberry Pi inkl. Updates<br>
 - - -
 ## Installationsanleitung (Didaktisch reduzierte Anleitung. Lernende sollen eigene Lösungswege realisieren)
-• Paketliste aktualisieren<br>
-• 
+### Raspberry Pi Betriebssystem updaten<br>
+Nach dem Sie den Raspi mit SD Karte von der Lehrperson erhalten haben, führen Sie als erstes die Betriebssystem Updates aus. So können Sie jegliche veraltete Systemfehler meiden.<br>
+`Paketliste aktualisieren`
 
-### Hilfestellung (Tipps, Quellen...)
+### etcd installieren
+etcd ist ein stark konsistenter, verteilter Key-Value-Speicher, der eine zuverlässige Möglichkeit zum Speichern von Daten bietet, auf die ein distributed System oder ein Cluster von Rechnern zugreifen muss. In unserem Fall wird dieser verwendet, um den Service zu registrieren.<br>
+`etcd installieren`<br>
+Anschliessend muss die Konfigurationsdatei angepasst werden, damit die Funktionalität von **etcd** gewährleistet werden kann.<br>
+Am Ende von */etc/default/etcd* müssen wir die folgende Zeile hinzufügen.<br>
+`ETCD_UNSUPPORTED_ARCH=arm`<br>
+Zu guter letzt muss noch der Service gestartet werden. Ebenfalls geben wir dem System mit, dass der Service bei jedem Start automatisch gestartet wird.<br>
+`Service starten`<br>
+`Service bei jedem Hochfahren automatisch starten`
+### OwnCloud Infinite Scale Binary herunterladen und ausführen
+Nun begeben wir uns in das Homeverzeichnis des Users pi.<br>
+`Ins Homeverzeichnis wechseln`<br>
+Als erstes muss man den Build vom Downloadserver herunterladen.<br>
+`curl https://download.owncloud.com/ocis/ocis/1.1.0/ocis-1.1.0-linux-arm --output ocis-1.1.0-linux-arm`<br>
+Sobald der Build heruntergeladen wurde, muss man diesen ausführen. Damit dies klappt muss die Datei ausführbar gemacht werden. Die folgende Hilfestellung unterstützt Sie dabei: [What does chmod 755 mean?](https://linuxhint.com/what-is-the-meaning-of-chmod-755-and-how-to-execute-and-verify-it/)<br>
+`Datei ausführbar machen`<br>
+Nun erstellen wir ein Skript, welches die OwnCloud Instanz startet.<br>
+`Bash Shell Script File anlegen mit dem Namen "startocis"`<br>
+Das eben erstellte Skript bearbeiten wir mit einem Editor und fügen die benötigte Konfiguration ein. Dem Skript muss mitgegeben werden, dass etcd verwendet wird.<br>
+`File gem. Bild bearbeiten`<br>
+![Inhalt von Startskript](../img/startocis.png)<br>
+An dieser Stelle müssen wir das eben erstelle Skript abspeichern und ausführbar machen<br> 
+`Das eben erstellte Skript ausführbar machen`<br>
+Am Ende führen wir das Skript aus um die OwnCloud Instanz zu starten<br>
+`Skript laufen lassen`
+### Zugreifen
+Die Installation ist hiermit abgeschlossen. Sie dürfen den Zugriff auf das Web-Interface von Ihrer OwnCloud Instanz testen.<br>
+`https://<hostname>:9200`
+### Cronjob für Startskript erstellen (Optional)
+Damit die Instanz nicht bei jedem Hochfahren des Raspberry manuell gestartet werden muss, richten wir einen Cronjob ein. Wir lassen das Startskript alle 5 Minuten laufen. Den Cronjob richten wir im Kontext des root Benutzers ein, damit das Skript vollständig ausgeführt wird.<br>
+`Crontab des roots editieren`<br>
+In der Konfigurationsdatei von Cron definieren wir nun, dass das Startskript alle 5 Minuten laufen soll.<br>
+`Cronjob eintragen`<br>
+Sobald das File gespeichert wird, starten wir den Cron Service neu, um die Änderungen wirksam zu machen.<br>
+`Cron Service neustarten`
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 • Erreichbarkeit des Web-Interface im Browser prüfen<br>
@@ -59,7 +94,7 @@ Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies meh
 Falls der Verdacht besteht, dass der Cronjob nicht oder nicht korrekt ausgeführt wurde, kann man dies in den Logs prüfen. Das allgemeine Logfile kann man mit folgendem Befehl auslesen.<br>
 `sudo grep CRON /var/log/syslog`<br>
 Wird man aus dem Syslog nicht schlau, so kann man auch für einen Cronjob zwei spezifische Logfiles anlegen und diese anschliessend auslesen. Den Parameter setzt man beim Cronjob selbst. So kann dieser anschliessend aussehen:<br>
-`*/5 * * * * /bin/bash /home/pi/startocis.sh 1> /home/pi/log.txt 2> /home/pi/err.txt`<br>
+`*/5 * * * * /bin/bash /home/pi/meinskript.sh 1> /home/pi/log.txt 2> /home/pi/err.txt`<br>
 Wie der Parameter schon sagt, differenziert man zwischen Log-, und Errorfile in diesem Beispiel.
 - - -
 ## Quellen
