@@ -7,7 +7,31 @@
    • Mail: altin.maliqaj@edu.tbz.ch | patrik.pribela@edu.tbz.ch
 
    • Version: 2.0 (Didaktisch reduzierte Edition)
-   ---
+- - -
+## Inhaltsvezeichnis
+- [Werkstattauftrag W08 OwnCloud](#werkstattauftrag-w08-owncloud)
+  - [Autoren, Versionierung des Dokumentes](#autoren-versionierung-des-dokumentes)
+  - [Inhaltsvezeichnis](#inhaltsvezeichnis)
+  - [Einführung](#einführung)
+    - [Beschreibung: Welche Funktionen wird der Service erfüllen](#beschreibung-welche-funktionen-wird-der-service-erfüllen)
+      - [OwnCloud Infinite Scale](#owncloud-infinite-scale)
+    - [Vorgesehener Zeitaufwand für die Realisierung](#vorgesehener-zeitaufwand-für-die-realisierung)
+    - [Stolpersteine](#stolpersteine)
+  - [Benötigte Hard- und Software](#benötigte-hard--und-software)
+    - [Hardware (Materialliste, Funktionalität)](#hardware-materialliste-funktionalität)
+    - [Software (Anforderungen, Firmware, OS-Image, ergänzende SW-Packages, Abhängigkeiten, Funktionalität)](#software-anforderungen-firmware-os-image-ergänzende-sw-packages-abhängigkeiten-funktionalität)
+  - [Installationsanleitung (Didaktisch reduzierte Anleitung. Lernende sollen eigene Lösungswege realisieren)](#installationsanleitung-didaktisch-reduzierte-anleitung-lernende-sollen-eigene-lösungswege-realisieren)
+    - [Raspberry Pi Betriebssystem updaten<br>](#raspberry-pi-betriebssystem-updaten)
+    - [etcd installieren](#etcd-installieren)
+    - [OwnCloud Infinite Scale Binary herunterladen und ausführen](#owncloud-infinite-scale-binary-herunterladen-und-ausführen)
+    - [Zugreifen](#zugreifen)
+    - [Cronjob für Startskript erstellen (Optional)](#cronjob-für-startskript-erstellen-optional)
+  - [Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)](#qualitätskontrolle-prüfen-der-funktionalität-mit-ablauf-von-kommandos-und-entsprechenden-outputs)
+  - [Error-Handling](#error-handling)
+    - [Allgemeine Schritte vor weiterem Debugging zwingend ausführen](#allgemeine-schritte-vor-weiterem-debugging-zwingend-ausführen)
+    - [Logs von CRON auslesen](#logs-von-cron-auslesen)
+  - [Quellen](#quellen)
+  - [Hilfe](#hilfe)
 ## Einführung
 In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt allen Anforderungen von OwnCloud dokumentiert.
 
