@@ -130,3 +130,5 @@ Wie der Parameter schon sagt, differenziert man zwischen Log-, und Errorfile in 
 ## Hilfe
 • [Crontab Generator](https://crontab-generator.org/)<br>
 - - -
+Hier geht es zur [didaktsich reduzierten Dokumentation](../Didaktische%20Reduktion/README.md)
+- - -

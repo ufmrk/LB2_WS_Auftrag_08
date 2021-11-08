@@ -32,7 +32,6 @@
     - [Logs von CRON auslesen](#logs-von-cron-auslesen)
   - [Quellen](#quellen)
   - [Hilfe](#hilfe)
-- - -
 ## Einführung
 In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt allen Anforderungen von OwnCloud dokumentiert.
 
@@ -129,4 +128,6 @@ Wie der Parameter schon sagt, differenziert man zwischen Log-, und Errorfile in 
 - - -
 ## Hilfe
 • [Crontab Generator](https://crontab-generator.org/)<br>
+- - -
+Hier geht es zur [vollständigen Dokumentation](../Dokumentation/README.md)
 - - -
