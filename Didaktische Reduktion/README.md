@@ -32,6 +32,7 @@
     - [Logs von CRON auslesen](#logs-von-cron-auslesen)
   - [Quellen](#quellen)
   - [Hilfe](#hilfe)
+- - -
 ## Einführung
 In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt allen Anforderungen von OwnCloud dokumentiert.
 
