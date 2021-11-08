@@ -17,8 +17,8 @@
     - [Vorgesehener Zeitaufwand für die Realisierung](#vorgesehener-zeitaufwand-für-die-realisierung)
     - [Stolpersteine](#stolpersteine)
   - [Benötigte Hard- und Software](#benötigte-hard--und-software)
-    - [Hardware (Materialliste, Funktionalitaet)](#hardware-materialliste-funktionalitaet)
-    - [Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)](#software-anforderungen-firmware-os-image-ergaenzende-sw-packages-abhängigkeiten-funktionalitaet)
+    - [Hardware (Materialliste, Funktionalität)](#hardware-materialliste-funktionalitaet)
+    - [Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalität)](#software-anforderungen-firmware-os-image-ergaenzende-sw-packages-abhängigkeiten-funktionalitaet)
   - [Installationsanleitung (Lösungsweg)](#installationsanleitung-lösungsweg)
     - [Raspberry Pi Betriebssystem updaten<br>](#raspberry-pi-betriebssystem-updaten)
     - [etcd installieren](#etcd-installieren)
@@ -53,11 +53,11 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
    Da öffentliche Netzwerke oft viele Sicherheitsmassnahmen eingepflegt erhalten, besteht die Möglichkeit, dass immer wieder Ports, welche essentiell für eine Anwendung sind, blockiert werden. Es gilt die Empfehlung bei Home Office Möglichkeit diese zu nutzen und aus dem Heimnetzwerk aus zu arbeiten.<br>
 - - -
 ## Benötigte Hard- und Software
-   ### Hardware (Materialliste, Funktionalitaet)
+   ### Hardware (Materialliste, Funktionalität)
    • Raspberry Pi<br>
    • Monitor + Peripherie (Maus und Tastatur)<br>
    • ggf. Netzwerkperipherie (Kabel, Switch)
-   ### Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)
+   ### Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalität)
    • Neuste OS Version von Raspberry Pi inkl. Updates<br>
 - - -
 ## Installationsanleitung (Lösungsweg)
