@@ -37,6 +37,7 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
    • Neuste OS Version von Raspberry Pi inkl. Updates<br>
 - - -
 ## Installationsanleitung (Didaktisch reduzierte Anleitung. Lernende sollen eigene Lösungswege realisieren)
+In diesem Dokument sind die Befehle, welche auf der Kommandozeile ausgeführt werden sollen nicht definiert. Hervorgehoben sind die einzelnen Schritte, welche durchgeführt werden müssen. Um den Zusammenhang zu verstehen, empfehlen wir die Erläuterungen zu berücksichtigen.
 ### Raspberry Pi Betriebssystem updaten<br>
 Nach dem Sie den Raspi mit SD Karte von der Lehrperson erhalten haben, führen Sie als erstes die Betriebssystem Updates aus. So können Sie jegliche veraltete Systemfehler meiden.<br>
 `Paketliste aktualisieren`
