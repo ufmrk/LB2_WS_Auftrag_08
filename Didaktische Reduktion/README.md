@@ -11,7 +11,7 @@
 ## Einführung
 In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt allen Anforderungen von OwnCloud dokumentiert.
 
-   ### Beschreibung: Welche Funktionen wird der Service erfuellen
+   ### Beschreibung: Welche Funktionen wird der Service erfüllen
    OwnCloud ist Ihre eine eigene private Cloud zum Austausch von Dateien. Die wichtigsten Features und Funktionen von OwnCloud sind die Bereitstellung von Clients, Synchronisation, ActiveDirectory-Anbindung, Verschlüsselung und viele andere. Es wird angestrebt diese auf allen Plattformen betreiben zu können.
 
    #### OwnCloud Infinite Scale
@@ -27,13 +27,13 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
    Falls sich der Raspberry Pi nicht aktualisieren lässt und/oder die Hardware veraltet ist, kann (muss nicht!) es vorkommen, dass es zu Problemen bezüglich Kompatibilität führt. Wir empfehlen in einem solchen Fall eine virtuelle Maschine zu erstellen und das Raspbian OS aufzusetzen.<br>
    **• Restriktionen des (TBZ) Netzwerks**<br>
    Da öffentliche Netzwerke oft viele Sicherheitsmassnahmen eingepflegt erhalten, besteht die Möglichkeit, dass immer wieder Ports, welche essentiell für eine Anwendung sind, blockiert werden. Es gilt die Empfehlung bei Home Office Möglichkeit diese zu nutzen und aus dem Heimnetzwerk aus zu arbeiten.<br>
-   - - -
+- - -
 ## Benötigte Hard- und Software
-   ### Hardware (Materialliste, Funktionalitaet)
+   ### Hardware (Materialliste, Funktionalität)
    • Raspberry Pi<br>
    • Monitor + Peripherie (Maus und Tastatur)<br>
    • ggf. Netzwerkperipherie (Kabel, Switch)
-   ### Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)
+   ### Software (Anforderungen, Firmware, OS-Image, ergänzende SW-Packages, Abhängigkeiten, Funktionalität)
    • Neuste OS Version von Raspberry Pi inkl. Updates<br>
 - - -
 ## Installationsanleitung (Didaktisch reduzierte Anleitung. Lernende sollen eigene Lösungswege realisieren)
@@ -43,6 +43,10 @@ In der folgenden Dokumentation ist die Installation, sowie Konfiguration samt al
 ### Hilfestellung (Tipps, Quellen...)
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
+• Erreichbarkeit des Web-Interface im Browser prüfen<br>
+`https://"hostname":9200`<br>
+• Cron Logs auslesen und prüfen, ob das Startskript ausgeführt wurde<br>
+`sudo grep CRON /var/log/syslog`
 - - -
 ## Error-Handling
 Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies mehrere Gründe haben. Weiter unten finden Sie die gängigsten Fehler aufgelistet.
@@ -51,6 +55,12 @@ Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies meh
 • Prüfen, ob der Dienst der Anwendung läuft<br>
 • Netzwerkverbindung prüfen<br>
 • Restriktionen im Netzwerk ausschliessen
+### Logs von CRON auslesen
+Falls der Verdacht besteht, dass der Cronjob nicht oder nicht korrekt ausgeführt wurde, kann man dies in den Logs prüfen. Das allgemeine Logfile kann man mit folgendem Befehl auslesen.<br>
+`sudo grep CRON /var/log/syslog`<br>
+Wird man aus dem Syslog nicht schlau, so kann man auch für einen Cronjob zwei spezifische Logfiles anlegen und diese anschliessend auslesen. Den Parameter setzt man beim Cronjob selbst. So kann dieser anschliessend aussehen:<br>
+`*/5 * * * * /bin/bash /home/pi/startocis.sh 1> /home/pi/log.txt 2> /home/pi/err.txt`<br>
+Wie der Parameter schon sagt, differenziert man zwischen Log-, und Errorfile in diesem Beispiel.
 - - -
 ## Quellen
 • [Offizielle Installationsanleitung von OwnCloud](https://owncloud.com/de/news/howto-owncloud-infinite-scale-on-a-raspberry-pi/)<br>
