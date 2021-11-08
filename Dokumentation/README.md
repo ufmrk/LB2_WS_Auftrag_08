@@ -53,21 +53,31 @@ Zu guter letzt muss noch der Service gestartet werden.<br>
 `sudo service etcd start`<br>
 
 ### OwnCloud Infinite Scale Binary herunterladen und ausführen
+Nun begeben wir uns in das Homeverzeichnis des Users pi.<br>
+`cd ~`<br>
 Als erstes muss man den Build vom Downloadserver herunterladen.<br>
 `curl https://download.owncloud.com/ocis/ocis/1.1.0/ocis-1.1.0-linux-arm --output ocis-1.1.0-linux-arm`<br>
 Sobald der Build heruntergeladen wurde, muss man diesen ausführen. Damit dies klappt muss folgender Befehl eingegeben werden:<br>
 `chmod 755 ./ocis-1.1.0-linux-arm`<br>
-Nun erstellen wir ein Skript, welches die OwnCloud Instanz startet. Dem Skript muss mitgegeben werden, dass etcd verwendet werden muss.<br>
+Nun erstellen wir ein Skript, welches die OwnCloud Instanz startet.<br>
+`touch startocis.sh`<br>
+Das eben erstellte Skript bearbeiten wir mit einem Editor und fügen die benötigte Konfiguration ein. Dem Skript muss mitgegeben werden, dass etcd verwendet wird.<br>
+`nano startocis.sh`<br>
 ![Inhalt von Startskript](../img/startocis.png)<br>
-An dieser Stelle müssen wir das eben erstelle Skript ausführbar machen<br>
+An dieser Stelle müssen wir das eben erstelle Skript abspeichern und ausführbar machen<br> 
 ` sudo chmod 755 startocis.sh`<br>
 Am Ende führen wir das Skript aus um die OwnCloud Instanz zu starten<br>
 `sudo ./startocis.sh`
 ### Zugreifen
 Die Installation ist hiermit abgeschlossen. Sie dürfen den Zugriff auf das Web-Interface von Ihrer OwnCloud Instanz testen.<br>
 `https://<hostname>:9200`
-### Cronjob für Startskript
-
+### Cronjob für Startskript erstellen (Optional)
+Damit die Instanz nicht bei jedem Hochfahren des Raspberry manuell gestartet werden muss, richten wir einen Cronjob ein. Wir lassen das Startskript alle 5 Minuten laufen. Den Cronjob richten wir im Kontext des root Benutzers ein, damit das Skript vollständig ausgeführt wird.<br>
+`sudo crontab -e`<br>
+In der Konfigurationsdatei von Cron fügen wir nun die folgende Zeile ein:<br>
+`*/5 * * * * /bin/bash /home/pi/startocis.sh`<br>
+Sobald das File gespeichert wird, starten wir den Cron Service neu, um die Änderungen wirksam zu machen.<br>
+`sudo service cron restart`
 - - -
 ## Qualitätskontrolle (Prüfen der Funktionalität mit Ablauf von Kommandos und entsprechenden Outputs)
 - - -
