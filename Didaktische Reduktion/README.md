@@ -54,5 +54,8 @@ Falls die Installation am Ende nicht ordnungsgemäss funktioniert, kann dies meh
 - - -
 ## Quellen
 • [Offizielle Installationsanleitung von OwnCloud](https://owncloud.com/de/news/howto-owncloud-infinite-scale-on-a-raspberry-pi/)<br>
-• 
+• [etcd Dokumentation](https://etcd.io/docs/v3.5/)<br>
+- - -
+## Hilfe
+• [Crontab Generator](https://crontab-generator.org/)<br>
 - - -
